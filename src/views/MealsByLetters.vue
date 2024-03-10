@@ -1,5 +1,5 @@
 <template>
-  <div>Meal List</div>
+  <div>By Letters</div>
 </template>
 
 <script setup></script>
