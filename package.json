@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ahmed-khaled18.github.io/happy-meal/",
   "name": "happy-meal",
   "private": true,
   "version": "0.0.0",
@@ -6,10 +7,13 @@
   "scripts": {
     "dev": "vite --port=3000",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.6.7",
+    "gh-pages": "^6.1.1",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0",
     "vuex": "^4.1.0"
