@@ -4,6 +4,7 @@ import MealsByName from "../views/MealsByName.vue";
 import MealsByLetters from "../views/MealsByLetters.vue";
 import MealsByIngrediants from "../views/MealsByIngrediants.vue";
 import DefaultLayot from "../components/DefaultLayot.vue";
+import MealDetails from "../views/MealDetails.vue";
 const routes = [
   {
     path: "/",
@@ -29,6 +30,11 @@ const routes = [
         path: "/by-ingrediants/:ingrediants?",
         name: "byIngrediants",
         component: MealsByIngrediants,
+      },
+      {
+        path: "/meal/:id",
+        name: "mealDetails",
+        component: MealDetails,
       },
     ],
   },
