@@ -9,36 +9,36 @@ import Ingredients from "../views/Ingredients.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/happy-meal/",
     component: DefaultLayout,
     children: [
       {
-        path: "/",
+        path: "/happy-meal/",
         name: "home",
         component: Home,
       },
       {
-        path: "/by-name/:name?",
+        path: "/happy-meal/by-name/:name?",
         name: "byName",
         component: MealsByName,
       },
       {
-        path: "/by-letter/:letter?",
+        path: "/happy-meal/by-letter/:letter?",
         name: "byLetter",
         component: MealsByLetter,
       },
       {
-        path: "/ingredients",
+        path: "/happy-meal/ingredients",
         name: "ingredients",
         component: Ingredients,
       },
       {
-        path: "/by-ingredient/:ingredient",
+        path: "/happy-meal/by-ingredient/:ingredient",
         name: "byIngredient",
         component: MealsByIngredient,
       },
       {
-        path: "/meal/:id",
+        path: "/happy-meal/meal/:id",
         name: "mealDetails",
         component: MealDetails,
       },
