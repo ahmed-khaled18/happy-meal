@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
+import DefaultLayout from "../components/DefaultLayout.vue";
 import Home from "../views/Home.vue";
+import MealsByIngredient from "../views/MealsByIngredient.vue";
+import MealsByLetter from "../views/MealsByLetter.vue";
 import MealsByName from "../views/MealsByName.vue";
-import MealsByLetters from "../views/MealsByLetters.vue";
-import MealsByIngrediants from "../views/MealsByIngrediants.vue";
-import DefaultLayot from "../components/DefaultLayot.vue";
 import MealDetails from "../views/MealDetails.vue";
+import Ingredients from "../views/Ingredients.vue";
+
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: DefaultLayot,
+    component: DefaultLayout,
     children: [
       {
         path: "/",
@@ -24,12 +25,17 @@ const routes = [
       {
         path: "/by-letter/:letter?",
         name: "byLetter",
-        component: MealsByLetters,
+        component: MealsByLetter,
       },
       {
-        path: "/by-ingrediants/:ingrediants?",
-        name: "byIngrediants",
-        component: MealsByIngrediants,
+        path: "/ingredients",
+        name: "ingredients",
+        component: Ingredients,
+      },
+      {
+        path: "/by-ingredient/:ingredient",
+        name: "byIngredient",
+        component: MealsByIngredient,
       },
       {
         path: "/meal/:id",
@@ -39,8 +45,10 @@ const routes = [
     ],
   },
 ];
+
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
 export default router;
